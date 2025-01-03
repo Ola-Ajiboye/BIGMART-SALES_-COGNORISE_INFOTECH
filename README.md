@@ -11,8 +11,9 @@ BigMart Sales Analysis. This analysis will empower BigMart Sales to strategicall
 7.	Outlet Performance
 ## TECHNICAL TOOLS:
 •	Power Query: for cleaning data, ensuring data quality and consistency.
+
 •	Power BI: Data Visualization and DAX Formular Calculation.
-•	SQL: Analysis
+
 ## DATA COLLECTION AND PREPARATION
 Data Collection: Data set used in this analysis was sourced from Kaggle, Data Cleaning using Power query The data was cleaned and processed for use in Power query through the following steps.
 
