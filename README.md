@@ -22,11 +22,31 @@ Preparation: Preprocessing involved checking data types, handling missing values
 ![BBB](https://github.com/user-attachments/assets/19f164b7-9918-41b4-a89c-e14e7d73b2ec)
 
 ## FAT CONTENT ANALYSIS
+```
+Select
+	item_fat_content as Item_Fat,
+	Round(Sum(item_outlet_sales)/100,0) as Total_sales
+from 
+	Bigmart
+Group by 
+	item_fat_content
+```
 ![dsr](https://github.com/user-attachments/assets/1738b890-feba-4ac4-8cbe-749b139dd5f2)
 
 Finding: Items with low fat content showed a 63% higher sales growth compared to high-fat items. 
 Recommendation: Focus on promoting low-fat items through targeted marketing campaigns and bundling strategies.
 ## OUTLET SIZE
+```
+Select
+	Outlet_size as Size,
+	Round(Sum(item_outlet_sales)/100,0) as Total_Slaes
+From
+	Bigmart
+Group by 
+	Outlet_Size
+Order by
+	Outlet_Size desc
+```
 Finding: Medium outlets had 42% more sales volume but higher operational costs. 
 Recommendation: Optimize inventory in medium outlets to capitalize on their scale while exploring cost-reduction strategies.
 ## LOCATION 
@@ -35,6 +55,15 @@ Recommendation: Optimize inventory in medium outlets to capitalize on their scal
 Finding: Tier 3 outlets outperformed tier 2 and tier 1 ones, particularly in health products. 
 Recommendation: Develop location-specific marketing strategies that leverage tier health trends and lifestyle products.
 ## ESTABLISHMENT YEAR
+```
+Select
+	outlet_establishment_year as Year,
+	Round(sum(item_outlet_sales)/100,0) as Total_sales
+From 
+	Bigmart
+Group by 
+	Outlet_Establishment_Year
+```
 ![Capture](https://github.com/user-attachments/assets/48cc2d2a-fc0a-4de9-9fd5-0d1c422c57b2)
 
 Finding: Newer outlets had lower in almost all the year’s most especially sales extremely low in 1998, customer retention rates compared to first established year. 
@@ -42,6 +71,19 @@ Finding: Newer outlets had lower in almost all the year’s most especially sale
 Finding: Fruits and Vegetables products had the highest customer satisfaction ratings, while snacks had higher return rates. 
 Recommendation: Increase marketing efforts for fruits and vegetable, and snacks products items while investigating quality control issues with snacks.
 ## OUTLET PERFORMANCE EVALUATION
+``` sql
+Select
+	Outlet_Type as Outlet_Type,
+	Round(Sum(Item_Outlet_Sales)/100,0) as Total_sales,
+	Round(avg(Item_outlet_sales)/100,0) as Avg_sales,
+	count(Item_identifier) as No_items_Sold
+From
+	Bigmart
+Group by
+	Outlet_Type
+Order by
+	Outlet_type
+ ```
 ![ehaet](https://github.com/user-attachments/assets/7f749893-5847-461f-9861-814046e83ffb)
 
 Finding: Top-performing outlets had consistent customer feedback and higher sales volumes. 
