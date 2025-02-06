@@ -22,7 +22,7 @@ Preparation: Preprocessing involved checking data types, handling missing values
 ![BBB](https://github.com/user-attachments/assets/19f164b7-9918-41b4-a89c-e14e7d73b2ec)
 
 ## FAT CONTENT ANALYSIS
-```
+```sql
 Select
 	item_fat_content as Item_Fat,
 	Round(Sum(item_outlet_sales)/100,0) as Total_sales
@@ -36,7 +36,7 @@ Group by
 Finding: Items with low fat content showed a 63% higher sales growth compared to high-fat items. 
 Recommendation: Focus on promoting low-fat items through targeted marketing campaigns and bundling strategies.
 ## OUTLET SIZE
-```
+``` sql
 Select
 	Outlet_size as Size,
 	Round(Sum(item_outlet_sales)/100,0) as Total_Slaes
@@ -55,7 +55,7 @@ Recommendation: Optimize inventory in medium outlets to capitalize on their scal
 Finding: Tier 3 outlets outperformed tier 2 and tier 1 ones, particularly in health products. 
 Recommendation: Develop location-specific marketing strategies that leverage tier health trends and lifestyle products.
 ## ESTABLISHMENT YEAR
-```
+``` sql
 Select
 	outlet_establishment_year as Year,
 	Round(sum(item_outlet_sales)/100,0) as Total_sales
